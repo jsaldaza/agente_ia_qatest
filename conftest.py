@@ -4,7 +4,7 @@ from playwright.sync_api import sync_playwright
 @pytest.fixture(scope="session")
 def playwright_context():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)  # ✅ Modo headless para GitHub Actions
         context = browser.new_context()
         yield context
         browser.close()
