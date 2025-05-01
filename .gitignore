@@ -1,0 +1,40 @@
+# 🐍 Entorno virtual
+.venv/
+venv/
+env/
+
+# 🔐 Archivos sensibles
+.env
+
+# 🧪 Caché y archivos temporales
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp
+*.DS_Store
+*.swp
+*.bak
+
+# 📦 Archivos de instalación
+*.egg-info/
+dist/
+build/
+
+# 🧪 Pytest / Playwright / Allure
+.playwright/
+test-results/
+allure-report/
+allure-results/
+
+# 📄 Exportaciones automáticas
+outputs/
+*.csv
+*.md
+*.feature
+
+# 🚫 Archivos de backup/editor
+*.vscode/
+*.idea/
+*.code-workspace

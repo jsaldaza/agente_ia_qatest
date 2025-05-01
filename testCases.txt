@@ -1,0 +1,34 @@
+Escribe la historia de usuario: Como cliente, quiero poder buscar productos por nombre para encontrarlos más rápido en la tienda online.
+
+--- Casos de prueba generados ---
+
+Casos de prueba manuales:
+
+Título: Buscar producto por nombre existente
+Pasos:
+1. Ingresar a la tienda online.
+2. Ingresar el nombre de un producto existente en el campo de búsqueda.
+3. Presionar el botón de búsqueda.
+Resultado esperado: Se deben mostrar los resultados correspondientes al nombre del producto ingresado.
+
+Título: Buscar producto por nombre inexistente
+Pasos:
+1. Ingresar a la tienda online.
+2. Ingresar un nombre de producto inexistente en el campo de búsqueda.
+3. Presionar el botón de búsqueda.
+Resultado esperado: Se debe mostrar un mensaje indicando que no se encontraron resultados para el nombre ingresado.
+
+Escenarios Gherkin:
+
+Feature: Buscar productos por nombre
+Scenario: Buscar producto por nombre existente
+Given I am on the online store page
+When I enter the name of an existing product in the search field
+And I click the search button
+Then I should see the results corresponding to the entered product name
+
+Scenario: Buscar producto por nombre inexistente
+Given I am on the online store page
+When I enter the name of a non-existent product in the search field
+And I click the search button
+Then I should see a message indicating that no results were found for the entered name
